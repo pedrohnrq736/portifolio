@@ -122,16 +122,30 @@ if (contactForm) {
             return;
         }
 
-        // Se passou na validação
-        showMessage('✓ Mensagem enviada com sucesso! Obrigado pelo contato.', 'success');
-        contactForm.reset();
-
-        // Limpar após 3 segundos
-        setTimeout(() => {
-            const existingMessage = document.querySelector('.form-message');
-            if (existingMessage) existingMessage.remove();
-        }, 3000);
+        // Enviar para WhatsApp
+        sendToWhatsApp(name, email, subject, message);
     });
+}
+
+// Função para enviar mensagem via WhatsApp
+function sendToWhatsApp(name, email, subject, message) {
+    const phone = '5516999973261'; // Número sem formatação
+    const text = `*Novo Contato do Portfólio*\n\n*Nome:* ${name}\n*Email:* ${email}\n*Assunto:* ${subject}\n\n*Mensagem:*\n${message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodedText}`;
+    
+    // Abrir WhatsApp em nova aba
+    window.open(whatsappUrl, '_blank');
+    
+    // Mostrar mensagem de sucesso
+    showMessage('✓ Redirecionando para WhatsApp...', 'success');
+    contactForm.reset();
+
+    // Limpar após 2 segundos
+    setTimeout(() => {
+        const existingMessage = document.querySelector('.form-message');
+        if (existingMessage) existingMessage.remove();
+    }, 2000);
 }
 
 // Função para validar email
