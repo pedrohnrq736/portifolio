@@ -1,0 +1,26 @@
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-workspace
+
+# Dependências (se usar no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Arquivos temporários
+*.tmp
+*.log
+.env.local
+
+# Build
+dist/
+build/
