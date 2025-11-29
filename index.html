@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Jorge</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -18,7 +19,7 @@
         <div class="container">
             <div class="nav-brand">
                 <span class="brand-icon"><i class="fas fa-code"></i></span>
-                <h1>Pedro Jorge<span class="brand-accent"></span></h1>
+                <h1>Pedro Jorge</h1>
             </div>
             <button class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -31,8 +32,17 @@
                 <li><a href="#skills" class="nav-link">Habilidades</a></li>
                 <li><a href="#projects" class="nav-link">Projetos</a></li>
                 <li><a href="#contact" class="nav-link">Contato</a></li>
+                <li class="nav-divider"></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" title="Alternar Tema">
+                        <i class="fas fa-sun theme-icon"></i>
+                        <span class="theme-text">Claro</span>
+                    </button>
+                </li>
             </ul>
-            <a href="#contact" class="btn-nav">Fale Comigo</a>
+            <div class="nav-actions">
+                <a href="#contact" class="btn-nav">Fale Comigo</a>
+            </div>
         </div>
     </nav>
 
@@ -78,27 +88,6 @@
                     <p>Sou um desenvolvedor web especializado em criar experiências digitais modernas e responsivas. Tenho experiência com HTML5, CSS3, JavaScript, React, Node.js, APIs REST e Python.</p>
                     <p>Meu foco é em código limpo, boas práticas, performance e soluções inovadoras que agregam valor real aos projetos. Desenvolvo aplicações escaláveis e intuitivas.</p>
                     
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Projetos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">Clientes</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Anos Exp.</span>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -188,7 +177,7 @@
             <div class="projects-grid">
                 <div class="project-card" data-tech="Web">
                     <div class="project-image">
-                        <div class="image-placeholder"><i class="fas fa-heart"></i></div>
+                        <img src="img/site-barbara.jpeg" alt="Landing Page Psicóloga" class="project-img">
                     </div>
                     <div class="project-content">
                         <h3>Landing Page Psicóloga</h3>
@@ -204,96 +193,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card" data-tech="App">
-                    <div class="project-image">
-                        <div class="image-placeholder"><i class="fas fa-mobile-alt"></i></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>App Web Responsivo</h3>
-                        <p>Aplicação web mobile-first com HTML5, CSS3, JavaScript vanilla e design totalmente responsivo para todos os dispositivos.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Visualizar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tech="Dashboard">
-                    <div class="project-image">
-                        <div class="image-placeholder"><i class="fas fa-chart-line"></i></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Dashboard com React</h3>
-                        <p>Painel de controle com React, consumindo APIs REST, gráficos interativos e gerenciamento de estado com Context API.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">API REST</span>
-                            <span class="tag">Charts</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Visualizar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tech="Tool">
-                    <div class="project-image">
-                        <div class="image-placeholder"><i class="fas fa-toolbox"></i></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Gerador de Código</h3>
-                        <p>Ferramenta desenvolvida com Node.js e Python que gera código automaticamente a partir de templates e padrões de design.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Automação</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Visualizar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tech="Web">
-                    <div class="project-image">
-                        <div class="image-placeholder"><i class="fas fa-code-branch"></i></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Chat em Tempo Real</h3>
-                        <p>Aplicação de chat desenvolvida com React no frontend e Node.js com WebSockets no backend para comunicação em tempo real.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">WebSockets</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Visualizar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tech="App">
-                    <div class="project-image">
-                        <div class="image-placeholder"><i class="fas fa-robot"></i></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Gerenciador de Tarefas</h3>
-                        <p>Aplicação completa de gerenciamento de tarefas com React, API REST e suporte offline com IndexedDB.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">API REST</span>
-                            <span class="tag">IndexedDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Visualizar</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -302,72 +201,59 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                
                 <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="contact-wrapper">
-                <div class="contact-content">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Seu Nome" required>
-                            <span class="input-border"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Seu Email" required>
-                            <span class="input-border"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" placeholder="Assunto" required>
-                            <span class="input-border"></span>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder="Sua Mensagem" rows="5" required></textarea>
-                            <span class="input-border"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-large">
-                            <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
-                            Enviar via WhatsApp
-                        </button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>pedrorcj.pro@gmail.com</p>
-                        </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Seu Nome" required>
+                        <span class="input-border"></span>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(16) 99997-3261</p>
-                        </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Seu Email" required>
+                        <span class="input-border"></span>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>Franca, São Paulo, Brasil</p>
-                        </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Assunto" required>
+                        <span class="input-border"></span>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                        <span class="input-border"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+                        Enviar via WhatsApp
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
+    
     <!-- Footer -->
     <footer class="footer">
+        <br><br>
         <div class="container">
-            <p>&copy; 2025 Meu Portfólio. Desenvolvido por Pedro Jorge.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contato & Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="mailto:pedrorcj.pro@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/pedrohnrq736" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pedrojorge736/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/5516999973261" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Franca, São Paulo, Brasil</span>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Portfólio Pedro Jorge.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
